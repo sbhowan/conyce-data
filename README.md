@@ -8,9 +8,9 @@ A command-line tool for corpus linguists. Scans a directory of Praat TextGrid fi
 * there be  [PL. NOUN]
 * there are [PL. NOUN]   <- canonical
 * there was [PL. NOUN]
-* there were [PL. NOUN]
+* there were [PL. NOUN]  <- canonical
 
-Note: non-canonical agreement = "there is/'s/be" with a plural noun
+Note: non-canonical agreement = "there is/'s/be/WAS" with a plural noun
 
 Results are written to a CSV with per-speaker counts and the raw matched tokens for manual review.
 
