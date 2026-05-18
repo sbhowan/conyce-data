@@ -7,12 +7,7 @@ The existentials CSV has speaker IDs like "conyce_AC", "conyce_AD-2".
 The demographics CSV has a "Participant Code" column with values like
 "AC", "AD-2".
 
-Usage
------
-    python merge_demographics.py \
-        --existentials existentials.csv \
-        --demographics demographics.csv \
-        --output merged.csv
+Output: a merged CSV
 """
 
 import argparse
