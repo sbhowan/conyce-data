@@ -1,7 +1,12 @@
+conyce-data
+===========
+
+Two command-line tools for corpus linguists to extract constructions of interest from the Corpus of NYC English and join the output with a speaker demographics CSV (both locally saved).
+
 extract_existentials.py
 =======================
 
-A command-line tool for corpus linguists. Scans a directory of Praat TextGrid files from the Corpus of NYC English and counts instances of existential constructions followed by a plural noun:
+Scans a directory of Praat TextGrid files and counts instances of existential constructions followed by a plural noun:
 
 * there is  [PL. NOUN]
 * there's   [PL. NOUN]
@@ -29,3 +34,18 @@ Usage:
 ------
 
 `python extract_existentials.py --input /local/path/to/textgrids --output results.csv`
+
+merge_demographics.py
+=====================
+
+Joins the existentials.csv output of `extract_existentials.py` with a speaker demographics CSV, aligning on the participant code embedded in the speaker filename stem.
+
+Usage:
+------
+
+```
+    python merge_demographics.py \
+        --existentials existentials.csv \
+        --demographics demographics.csv \
+        --output merged.csv
+```
