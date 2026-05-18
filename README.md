@@ -1,7 +1,7 @@
 conyce-data
 ===========
 
-Two command-line tools for corpus linguists to extract constructions of interest from the Corpus of NYC English and join the output with a speaker demographics CSV (both locally saved).
+Two command-line tools for corpus linguists to extract existential constructions from the Corpus of NYC English and join the output with a speaker demographics CSV (both locally saved).
 
 extract_existentials.py
 =======================
