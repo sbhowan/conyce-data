@@ -53,10 +53,6 @@ Usage:
 prepare_regression.py
 =====================
 
-Joins the existentials.csv output of `extract_existentials.py` with a speaker demographics CSV, aligning on the participant code embedded in the speaker filename stem.
-
-Usage:
-------
 Reshapes the merged.csv output from `merge_demographics.py` from one-row-per-speaker to one-row-per-token. Additionally, adds the binary outcome variable as well as columns for linguistic predictors. 
 
 Note: In the Outcomes column, 1 refers to singular agreement ("there is/'s/was [PL. NOUN]"), while plural agreement refers to "there are/were [PL. NOUN]". "There be [PL. NOUN]" is an ambiguous case excluded from the analysis, since there is only one such case.
