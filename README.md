@@ -33,7 +33,11 @@ spaCy + English model for POS tagging:
 Usage:
 ------
 
-`python extract_existentials.py --input /local/path/to/textgrids --output results.csv`
+```
+    python extract_existentials.py \
+        --input /local/path/to/textgrids \
+        --output results.csv
+```
 
 merge_demographics.py
 =====================
