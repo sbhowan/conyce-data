@@ -1,6 +1,6 @@
 # Agreement optionality of existential 'there' in the Corpus of New York City English (CoNYCE)
 
-Command-line tools for corpus linguists to extract existential constructions from the Corpus of NYC English, join the output with a speaker demographics CSV, and reshape the data from one-row-per-speaker to one-row-per-token for statistical analysis using R. Both the corpus TextGrids and demographics file are saved locally for privacy reasons, but can be requested [here](https://conyce.commons.gc.cuny.edu).
+Three command-line tools for corpus linguists to extract existential constructions from the Corpus of NYC English, join the output with a speaker demographics CSV, and reshape the data from one-row-per-speaker to one-row-per-token for statistical analysis using R, respectively. Both the corpus TextGrids and demographics file are saved locally for privacy reasons, but can be requested [here](https://conyce.commons.gc.cuny.edu).
 
 ## `extract_existentials.py`
 
