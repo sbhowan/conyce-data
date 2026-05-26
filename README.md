@@ -1,10 +1,8 @@
-conyce-data
-===========
+# Agreement optionality of existential 'there' in the Corpus of New York City English (CoNYCE)
 
 Command-line tools for corpus linguists to extract existential constructions from the Corpus of NYC English, join the output with a speaker demographics CSV, and reshape the data from one-row-per-speaker to one-row-per-token for statistical analysis using R. Both the corpus TextGrids and demographics file are saved locally for privacy reasons, but can be requested [here](https://conyce.commons.gc.cuny.edu).
 
-extract_existentials.py
-=======================
+## `extract_existentials.py`
 
 Scans a directory of Praat TextGrid files and counts instances of existential constructions followed by a plural noun:
 
@@ -17,21 +15,23 @@ Scans a directory of Praat TextGrid files and counts instances of existential co
 
 Note: non-canonical agreement = "there is/'s/be/was" with a plural noun
 
-Results are written to a CSV with per-speaker counts and the raw matched tokens for manual review.
+Results are written to a CSV with per-speaker counts and the raw matched tokens.
 
-Dependencies:
--------------
+### Dependencies
 
-Praat TextGrid parsing:
+Praat TextGrid parsing + spaCy:
 
-`pip install tgt spacy`
+```
+pip install tgt spacy
+```
 
-spaCy + English model for POS tagging:
+English model for POS tagging: 
 
-`python -m spacy download en_core_web_sm`
+```
+python -m spacy download en_core_web_sm
+```
 
-Usage:
-------
+### Usage
 
 ```
     python extract_existentials.py \
@@ -39,13 +39,11 @@ Usage:
         --output results.csv
 ```
 
-merge_demographics.py
-=====================
+## `merge_demographics.py`
 
 Joins the existentials.csv output of `extract_existentials.py` with a speaker demographics CSV, aligning on the participant code embedded in the speaker filename stem.
 
-Usage:
-------
+### Usage
 
 ```
     python merge_demographics.py \
@@ -54,15 +52,14 @@ Usage:
         --output merged.csv
 ```
 
-prepare_regression.py
-=====================
+## `prepare_regression.py`
 
 Reshapes the merged.csv output from `merge_demographics.py` from one-row-per-speaker to one-row-per-token. Additionally, adds the binary outcome variable as well as columns for linguistic predictors. 
 
-Note: In the Outcomes column, 1 refers to singular agreement ("there is/'s/was [PL. NOUN]"), while plural agreement refers to "there are/were [PL. NOUN]". "There be [PL. NOUN]" is an ambiguous case excluded from the analysis, since there is only one such case.
+Note: In the Outcomes column, 1 refers to singular agreement ("there is/'s/was [PL. NOUN]"), while 0 refers to plural agreement ("there are/were [PL. NOUN]"). "There be [PL. NOUN]" is an ambiguous case excluded from the analysis, since there is only one such case.
 
-Usage
------
+### Usage
+
 ```
     python prepare_regression.py \
         --input merged.csv \
