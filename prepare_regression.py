@@ -31,6 +31,7 @@ def expand_tokens(row: dict) -> list[dict]:
             continue
         # Converts column value to list of strings
         tokens = [t.strip() for t in str(row[col]).split("|") if t.strip()]
+        # Adds linguistic predictors
         for token in tokens:
             record = {
                 "speaker":       row["speaker"],
