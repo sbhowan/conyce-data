@@ -13,7 +13,7 @@ Scans a directory of Praat TextGrid files and counts instances of existential co
 * there was [PL. NOUN]
 * there were [PL. NOUN]  <- canonical
 
-Note: non-canonical agreement = "there is/'s/be/was" with a plural noun
+**Note:** non-canonical agreement = "there is/'s/be/was" with a plural noun
 
 Results are written to a CSV with per-speaker counts and the raw matched tokens.
 
@@ -56,7 +56,7 @@ Joins the existentials.csv output of `extract_existentials.py` with a speaker de
 
 Reshapes the merged.csv output from `merge_demographics.py` from one-row-per-speaker to one-row-per-token. Additionally, adds the binary outcome variable as well as columns for linguistic predictors. 
 
-Note: In the Outcomes column, 1 refers to singular agreement ("there is/'s/was [PL. NOUN]"), while 0 refers to plural agreement ("there are/were [PL. NOUN]"). "There be [PL. NOUN]" is an ambiguous case excluded from the analysis, since there is only one such case.
+**Note:** In the Outcomes column, 1 refers to singular agreement ("there is/'s/was [PL. NOUN]"), while 0 refers to plural agreement ("there are/were [PL. NOUN]"). "There be [PL. NOUN]" is an ambiguous case excluded from the analysis, since there is only one such case.
 
 ### Usage
 
